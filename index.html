@@ -10,7 +10,7 @@
         <meta property="og:url" content="https://www.towerofpizzakeylargo.com/">
         <meta property="og:image" content="images/Untitled-removebg-preview.png">
         <!-- Favicons -->         
-        <link rel="shortcut icon" href="images/Untitled-removebg-preview.png"> 
+        <link rel="shortcut icon" href="favicon.ico"> 
         <!-- Responsive Tag -->         
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <!-- CSS Files -->         
@@ -529,8 +529,9 @@
                             </div>                             
                         </div>
                         <div class="menu-item4 col-sm-4 col-xs-12 "> 
-                            <div class="menu-info"> <a href="./menu_all.html"> <img src="img/menu/1/4.jpg" class="img-responsive" alt=""> <div class="menu4-overlay"> 
-                                        <img src="images/chicken.jpg" width="476.66" height="325px"> 
+                            <div class="menu-info"> <a href="./menu_all.html"> <div class="menu4-overlay"> 
+                                        <h3>VIEW FULL MENU</h3>
+                                        <p>Chicken Specialties</p>
                                     </div> </a> 
                             </div>                             
                         </div>                         
@@ -611,13 +612,19 @@
           new WOW().init();
           
           // Smooth scrolling for anchor links
-          $(document).ready(function() {
-            $('a[href*="#"]').on('click', function(e) {
-              e.preventDefault();
-              $('html, body').animate({
-                scrollTop: $($(this).attr('href')).offset().top - 70
-              }, 800);
-            });
+            $(document).ready(function() {
+              $('a[href*="#"]:not([href="#"])').on('click', function(e) {
+                var hash = this.hash;
+                if (hash) {
+                  var target = $(hash);
+                  if (target.length && target.offset()) {
+                    e.preventDefault();
+                    $('html, body').animate({
+                      scrollTop: target.offset().top - 60
+                    }, 800);
+                  }
+                }
+              });
             
             // Add active class to menu items on scroll
             $(window).scroll(function() {
