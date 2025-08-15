@@ -124,6 +124,17 @@
                 border-color: #333;
                 color: #f9c56a;
             }
+            .btn-order-online {
+                animation: glow 1.5s infinite alternate;
+            }
+            @keyframes glow {
+                from {
+                    box-shadow: 0 0 5px -5px #f9c56a;
+                }
+                to {
+                    box-shadow: 0 0 5px 5px #f9c56a;
+                }
+            }
             #logo {
                 max-width: 300px;
                 transition: all 0.3s ease;
@@ -173,6 +184,7 @@
                                 <li><a href="#" data-toggle="modal" data-target="#menuModal">Menu</a></li>                                 
                                 <li><a href="#contact">Contact</a></li>
                                 <li><a href="#about">About Us</a></li>
+                                <li><a href="#" class="btn btn-default btn-order-online" data-glf-cuid="e78d337c-5fc0-474c-99a6-5342c238847f" data-glf-ruid="46ab1cef-bc81-4621-9228-92d3cdc513ea">See MENU &amp; Order</a></li>
                             </ul>                             
                         </div>                        
                         <!--/.navbar-collapse -->                         
@@ -191,7 +203,7 @@
                             <small style="color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); position: relative; bottom: -40px;">Enjoy Pizza in Paradise</small>
                         </h1>
                         <div class="wow fadeInUp" data-wow-delay="0.9s" style="margin-top: 80px;">
-                            <a href="#" class="btn btn-default btn-lg" data-toggle="modal" data-target="#menuModal">View Our Menu</a>
+                            <a href="#" class="btn btn-default btn-lg btn-order-online" data-glf-cuid="e78d337c-5fc0-474c-99a6-5342c238847f" data-glf-ruid="46ab1cef-bc81-4621-9228-92d3cdc513ea">See MENU &amp; Order</a>
                         </div>
                     </div>
                     <!-- Navigation button to trigger modal -->
@@ -309,6 +321,9 @@
                                     <hr>
                                     <img src="11x17 Menu Tower of Pizza 4-4-25_Page_2.png" class="img-responsive" alt="Menu Page 2">
                                 </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-default btn-order-online" data-glf-cuid="e78d337c-5fc0-474c-99a6-5342c238847f" data-glf-ruid="46ab1cef-bc81-4621-9228-92d3cdc513ea">See MENU &amp; Order</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -419,6 +434,7 @@
             });
           });
         </script>
+<script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async ></script>
 
     <!-- PWA Install Button -->
     <div id="installPrompt" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #d4af37; color: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; font-family: Arial, sans-serif;">
