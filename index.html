@@ -11,6 +11,13 @@
         <meta property="og:image" content="images/Untitled-removebg-preview.png">
         <!-- Favicons -->         
         <link rel="shortcut icon" href="favicon.ico"> 
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="manifest.json">
+        <!-- iOS meta tags -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="apple-mobile-web-app-title" content="Tower Pizza">
+        <link rel="apple-touch-icon" href="images/Untitled-removebg-preview.png">
         <!-- Responsive Tag -->         
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <!-- CSS Files -->         
@@ -643,6 +650,82 @@
             });
           });
         </script>
+
+    <!-- PWA Install Button -->
+    <div id="installPrompt" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #d4af37; color: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; font-family: Arial, sans-serif;">
+        <p style="margin: 0 0 10px 0; font-weight: bold;">Install Tower of Pizza App</p>
+        <button id="installBtn" style="background: white; color: #d4af37; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-right: 10px;">Install</button>
+        <button id="dismissBtn" style="background: transparent; color: white; border: 1px solid white; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Later</button>
+    </div>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+        let deferredPrompt;
+        const installPrompt = document.getElementById('installPrompt');
+        const installBtn = document.getElementById('installBtn');
+        const dismissBtn = document.getElementById('dismissBtn');
+
+        // Register service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('SW registered: ', registration);
+                    })
+                    .catch(registrationError => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+
+        // PWA Install Prompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installPrompt.style.display = 'block';
+        });
+
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                console.log(`User response to the install prompt: ${outcome}`);
+                deferredPrompt = null;
+            }
+            installPrompt.style.display = 'none';
+        });
+
+        dismissBtn.addEventListener('click', () => {
+            installPrompt.style.display = 'none';
+        });
+
+        // Hide install prompt if already installed
+        window.addEventListener('appinstalled', () => {
+            installPrompt.style.display = 'none';
+            deferredPrompt = null;
+        });
+
+        // iOS install instructions
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+
+        function isInStandaloneMode() {
+            return (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone === true);
+        }
+
+        if (isIOS() && !isInStandaloneMode()) {
+            const iosPrompt = document.createElement('div');
+            iosPrompt.innerHTML = `
+                <div style="position: fixed; bottom: 20px; left: 20px; right: 20px; background: #d4af37; color: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; font-family: Arial, sans-serif; text-align: center;">
+                    <p style="margin: 0 0 10px 0; font-weight: bold;">Install Tower of Pizza App</p>
+                    <p style="margin: 0 0 10px 0; font-size: 14px;">Tap <span style="font-weight: bold;">Share</span> then <span style="font-weight: bold;">"Add to Home Screen"</span></p>
+                    <button onclick="this.parentElement.parentElement.remove()" style="background: white; color: #d4af37; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Got it!</button>
+                </div>
+            `;
+            document.body.appendChild(iosPrompt);
+        }
+    </script>
          
 
 </body></html>

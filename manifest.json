@@ -1,0 +1,44 @@
+{
+  "name": "Tower of Pizza Key Largo",
+  "short_name": "Tower Pizza",
+  "description": "Family owned Pizzaera since 1977 offering pizzas, pasta, subs & other Italian comfort fare for dine-in or delivery.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d4af37",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/Untitled-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/Untitled-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "restaurant"],
+  "lang": "en",
+  "shortcuts": [
+    {
+      "name": "View Menu",
+      "short_name": "Menu",
+      "description": "View our full menu",
+      "url": "/index.html#menu",
+      "icons": [{
+        "src": "images/Untitled-removebg-preview.png",
+        "sizes": "192x192"
+      }]
+    }
+  ]
+}
