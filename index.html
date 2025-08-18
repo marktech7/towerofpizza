@@ -124,6 +124,17 @@
                 border-color: #333;
                 color: #f9c56a;
             }
+            .btn-order-online {
+                animation: glow 1.5s infinite alternate;
+            }
+            @keyframes glow {
+                from {
+                    box-shadow: 0 0 5px -5px #f9c56a;
+                }
+                to {
+                    box-shadow: 0 0 5px 5px #f9c56a;
+                }
+            }
             #logo {
                 max-width: 300px;
                 transition: all 0.3s ease;
@@ -139,6 +150,16 @@
                 .tittle-block h1 small {
                     font-size: 18px !important;
                     bottom: -80px !important;
+                }
+            }
+            @media (max-width: 992px) {
+                .navbar-nav > li > a {
+                    padding: 15px 10px;
+                    font-size: 12px;
+                }
+                .navbar-nav > li > a.btn {
+                    padding: 8px 12px;
+                    margin-top: 8px;
                 }
             }
         </style>
@@ -171,8 +192,9 @@
                             <ul class="nav navbar-nav navbar-right"> 
                                 <li><a href="./index.html">Home</a></li>                                 
                                 <li><a href="#" data-toggle="modal" data-target="#menuModal">Menu</a></li>                                 
-                                <li><a href="./contact.html">Contact</a></li>                                 
-                                <li><a href="./about.html">About Us</a></li>                                 
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#" class="btn btn-default btn-order-online" data-glf-cuid="e78d337c-5fc0-474c-99a6-5342c238847f" data-glf-ruid="46ab1cef-bc81-4621-9228-92d3cdc513ea">See MENU &amp; Order</a></li>
                             </ul>                             
                         </div>                        
                         <!--/.navbar-collapse -->                         
@@ -191,19 +213,11 @@
                             <small style="color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); position: relative; bottom: -40px;">Enjoy Pizza in Paradise</small>
                         </h1>
                         <div class="wow fadeInUp" data-wow-delay="0.9s" style="margin-top: 80px;">
-                            <a href="./menu_all.html" class="btn btn-default btn-lg">View Our Menu</a>
+                            <a href="#" class="btn btn-default btn-lg btn-order-online" data-glf-cuid="e78d337c-5fc0-474c-99a6-5342c238847f" data-glf-ruid="46ab1cef-bc81-4621-9228-92d3cdc513ea">See MENU &amp; Order</a>
                         </div>
-                              </div>
-                            </div>
-                          </div>
-                        <!-- Navigation button to trigger modal -->
-                        <script>
-                          document.querySelector('[data-target="#menuModal"]').addEventListener('click', function() {
-                            $('#menuModal').modal('show');
-                          });
-                        </script>
-                    </div>                     
-                    <div class="scroll-down wow fadeInDown" data-wow-delay="1.2s"> 
+                    </div>
+                    <!-- Navigation button to trigger modal -->
+                    <div class="scroll-down wow fadeInDown" data-wow-delay="1.2s">
                         <a href="#about"> 
                             <i class="fa fa-angle-down fa-3x" style="color: #ffffff;"></i>
                         </a> 
@@ -294,266 +308,46 @@
                                     </div>                                     
                                 </div>                                 
                             </div>
-                            <div class="row menu-items2"> 
-                                <div class="menu-item2 col-sm-6 col-xs-12 starter dinner wow fadeInUp" data-wow-delay="0.1s"> 
-                                    <div class="menu-info" style="background-color: rgba(0,0,0,0.6); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #f9c56a; transition: all 0.3s ease;"> 
-                                        <div class="menu-title"> 
-                                            <h4 style="color: #ffffff; font-size: 22px; margin-bottom: 5px;">Garlic Bread</h4> 
-                                            <p style="color: #ccc; font-size: 14px; margin-bottom: 10px;">Freshly baked bread with garlic butter</p>
-                                            <span class="menu-price" style="color: #f9c56a; font-size: 20px; font-weight: bold;">$5.95</span> 
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item2 col-sm-6 col-xs-12 starter wow fadeInUp" data-wow-delay="0.2s"> 
-                                    <div class="menu-info" style="background-color: rgba(0,0,0,0.6); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #f9c56a; transition: all 0.3s ease;"> 
-                                        <div class="menu-title"> 
-                                            <h4 style="color: #ffffff; font-size: 22px; margin-bottom: 5px;">Garlic Bread with Cheese</h4> 
-                                            <p style="color: #ccc; font-size: 14px; margin-bottom: 10px;">Our famous garlic bread topped with melted mozzarella</p>
-                                            <span class="menu-price" style="color: #f9c56a; font-size: 20px; font-weight: bold;">$6.95</span> 
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item2 col-sm-6 col-xs-12 starter wow fadeInUp" data-wow-delay="0.3s"> 
-                                    <div class="menu-info" style="background-color: rgba(0,0,0,0.6); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #f9c56a; transition: all 0.3s ease;"> 
-                                        <div class="menu-title"> 
-                                            <h4 style="color: #ffffff; font-size: 22px; margin-bottom: 5px;">Mozzarella Sticks</h4> 
-                                            <p style="color: #ccc; font-size: 14px; margin-bottom: 10px;">Golden fried mozzarella served with marinara sauce</p>
-                                            <span class="menu-price" style="color: #f9c56a; font-size: 20px; font-weight: bold;">$8.95</span> 
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item2 col-sm-6 col-xs-12 starter wow fadeInUp" data-wow-delay="0.4s"> 
-                                    <div class="menu-info" style="background-color: rgba(0,0,0,0.6); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #f9c56a; transition: all 0.3s ease;"> 
-                                        <div class="menu-title"> 
-                                            <h4 style="color: #ffffff; font-size: 22px; margin-bottom: 5px;">Fried Calamari</h4> 
-                                            <p style="color: #ccc; font-size: 14px; margin-bottom: 10px;">Lightly breaded and fried to perfection, served with marinara</p>
-                                            <span class="menu-price" style="color: #f9c56a; font-size: 20px; font-weight: bold;">$10.95</span> 
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                             
-                            <div class="menu-items row"> 
-                                <div class="menu-item col-sm-6 col-xs-12 pizza wow fadeInUp" data-wow-delay="0.1s"> 
-                                    <div class="menu-info" style="background-color: rgba(0,0,0,0.6); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #f9c56a; transition: all 0.3s ease;"> 
-                                        <div class="menu-title"> 
-                                            <h4 style="color: #ffffff; font-size: 22px; margin-bottom: 5px;">Cheese Pizza</h4> 
-                                            <p style="color: #ccc; font-size: 14px; margin-bottom: 10px;">Our classic pizza with homemade sauce and mozzarella cheese</p>
-                                            <span class="menu-price" style="color: #f9c56a; font-size: 20px; font-weight: bold;">$12.95</span> 
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 starter"> 
-                                    <div class="clearfix menu-wrapper"> 
-                                        <h4>Garlic rolls</h4> <span class="price">$5.00</span> 
-                                        <div class="dotted-bg"></div>                                         
-                                    </div>                                     
-                                </div>
-                                <div class="menu-item col-sm-6 col-xs-12 starter" style="bottom: -10px;"> 
-                                    <div class="clearfix menu-wrapper"> 
-                                        <h4>Baked mozzarella sticks (7)</h4> <span class="price">$9.00</span> 
-                                        <div class="dotted-bg"></div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 starter"> 
-                                    <div class="clearfix menu-wrapper"> 
-                                        <h4>Greek Trio</h4> <span class="price">$8.00</span> 
-                                        <div class="dotted-bg"></div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 starter"> 
-                                    <div class="clearfix menu-wrapper">
-                                        <h4>Caesar Salad</h4> <span class="price">$10.00</span> 
-                                        <div class="dotted-bg"></div>
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 pizza wow fadeInUp" data-wow-delay="0.2s"> 
-                                    <div class="menu-info" style="background-color: rgba(0,0,0,0.6); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #f9c56a; transition: all 0.3s ease;"> 
-                                        <div class="menu-title"> 
-                                            <h4 style="color: #ffffff; font-size: 22px; margin-bottom: 5px;">Pepperoni Pizza</h4> 
-                                            <p style="color: #ccc; font-size: 14px; margin-bottom: 10px;">Cheese pizza topped with slices of spicy pepperoni</p>
-                                            <span class="menu-price" style="color: #f9c56a; font-size: 20px; font-weight: bold;">$14.95</span> 
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 pizza wow fadeInUp" data-wow-delay="0.3s"> 
-                                    <div class="menu-info" style="background-color: rgba(0,0,0,0.6); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #f9c56a; transition: all 0.3s ease;"> 
-                                        <div class="menu-title"> 
-                                            <h4 style="color: #ffffff; font-size: 22px; margin-bottom: 5px;">Vegetarian Pizza</h4> 
-                                            <p style="color: #ccc; font-size: 14px; margin-bottom: 10px;">Fresh vegetables on our homemade crust</p>
-                                            <span class="menu-price" style="color: #f9c56a; font-size: 18px; font-weight: bold;">Medium 14" $19.00 / Large 16˝ $21.00</span> 
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 pizza wow fadeInUp" data-wow-delay="0.4s"> 
-                                    <div class="menu-info" style="background-color: rgba(0,0,0,0.6); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #f9c56a; transition: all 0.3s ease;"> 
-                                        <div class="menu-title"> 
-                                            <h4 style="color: #ffffff; font-size: 22px; margin-bottom: 5px;">Meat Lovers Pizza</h4> 
-                                            <p style="color: #ccc; font-size: 14px; margin-bottom: 10px;">Loaded with pepperoni, sausage, bacon and ham</p>
-                                            <span class="menu-price" style="color: #f9c56a; font-size: 18px; font-weight: bold;">Medium 14˝ $21.00 / Large 16˝ $23.00</span> 
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 pizza wow fadeInUp" data-wow-delay="0.5s"> 
-                                    <div class="menu-info" style="background-color: rgba(0,0,0,0.6); border-radius: 10px; padding: 20px; margin-bottom: 20px; border-left: 4px solid #f9c56a; transition: all 0.3s ease;"> 
-                                        <div class="menu-title"> 
-                                            <h4 style="color: #ffffff; font-size: 22px; margin-bottom: 5px;">Hawaiian Pizza</h4> 
-                                            <p style="color: #ccc; font-size: 14px; margin-bottom: 10px;">Ham and pineapple on our signature crust</p>
-                                            <span class="menu-price" style="color: #f9c56a; font-size: 18px; font-weight: bold;">Medium 14˝ $18.00 / Large 16˝ $21.00</span> 
-                                        </div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 pizza"> 
-                                    <div class="clearfix menu-wrapper">
-                                        <h4>Deluxe Pizza</h4> <span class="price" style="font-size: 25px;">Medium 14˝ $21.00 / Large 16˝ $23.00</span> 
-                                        <div class="dotted-bg"></div>
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 dinner"> 
-                                    <div class="clearfix menu-wrapper"> 
-                                        <h4>Veggie Burger</h4> <span class="price">$11.00</span> 
-                                        <div class="dotted-bg"></div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 dinner"> 
-                                    <div class="clearfix menu-wrapper"> 
-                                        <h4>Lasagna</h4> <span class="price">$15.00</span> 
-                                        <div class="dotted-bg"></div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 dinner"> 
-                                    <div class="clearfix menu-wrapper"> 
-                                        <h4>Seafood Platter</h4> <span class="price">$35.00</span> 
-                                        <div class="dotted-bg"></div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 dinner"> 
-                                    <div class="clearfix menu-wrapper">
-                                        <h4>Fettuccini Alfredo</h4> <span class="price">$15.00</span> 
-                                        <div class="dotted-bg"></div>
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 dinner"> 
-                                    <div class="clearfix menu-wrapper"> 
-                                        <h4>Gyros</h4> <span class="price">$13.00</span> 
-                                        <div class="dotted-bg"></div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 desserts"> 
-                                    <div class="clearfix menu-wrapper"> 
-                                        <h4>Key Lime Pie</h4> <span class="price">$5.50</span> 
-                                        <div class="dotted-bg"></div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 desserts"> 
-                                    <div class="clearfix menu-wrapper"> 
-                                        <h4>N.Y. Cheesecake</h4> <span class="price">$6.50</span> 
-                                        <div class="dotted-bg"></div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 desserts"> 
-                                    <div class="clearfix menu-wrapper">
-                                        <h4>Tiramisu</h4> <span class="price">$6.50</span> 
-                                        <div class="dotted-bg"></div>
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 desserts"> 
-                                    <div class="clearfix menu-wrapper"> 
-                                        <h4>Chocolate Cannoli</h4> <span class="price">$6.50</span> 
-                                        <div class="dotted-bg"></div>                                         
-                                    </div>                                     
-                                </div>                                 
-                                <div class="menu-item col-sm-6 col-xs-12 desserts"> 
-                                    <div class="clearfix menu-wrapper">
-                                        <h4>Chocolate Midnight Cake</h4> <span class="price">$7.50</span> 
-                                        <div class="dotted-bg"></div>
-                                    </div>                                     
-                                </div>                                 
-                            </div>                             
                             <div class="row"> 
                                 <div class="col-md-12"> 
-                                    <div class="menu-btn"> <a class="btn btn-default btn-lg" href="./menu_all.html" role="button">Explore our menu</a> 
+                                    <div class="menu-btn"> <a class="btn btn-default btn-lg" href="#" role="button" data-toggle="modal" data-target="#menuModal">Explore our menu</a>
                                     </div>                                     
                                 </div>                                 
                             </div>
                         </div>
                     </div>                     
                 </section>
-                <section class="about" id="about"> 
-                    <div class="row menu-items4"> 
-                        <!-- Menu items wrapped in Bootstrap modal -->
-                        <div id="menuModal" class="modal fade" tabindex="-1" role="dialog">
-                          <div class="modal-dialog" role="document">
+                <section class="about" id="about">
+                    <!-- Menu items wrapped in Bootstrap modal -->
+                    <div id="menuModal" class="modal fade" tabindex="-1" role="dialog">
+                        <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
-                              <div class="modal-body">
-                                <div class="menu-container">
-                                  <div class="menu-item4 col-sm-4 col-xs-12">
-
-                            <div class="menu-info"> 
-                                <img src="img/menu/1/1.jpg" class="img-responsive" alt=""> <a href="./menu_all.html"> <div class="menu4-overlay"> 
-                                        <img src="images/Dessert.jpeg" width="476.66" height="325px"> 
-                                    </div> </a> 
-                            </div>                             
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title">Our Menu</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="11x17 Menu Tower of Pizza 4-4-25_Page_1.png" class="img-responsive" alt="Menu Page 1">
+                                    <hr>
+                                    <img src="11x17 Menu Tower of Pizza 4-4-25_Page_2.png" class="img-responsive" alt="Menu Page 2">
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#" class="btn btn-default btn-order-online" data-glf-cuid="e78d337c-5fc0-474c-99a6-5342c238847f" data-glf-ruid="46ab1cef-bc81-4621-9228-92d3cdc513ea">See MENU &amp; Order</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="menu-item4 col-sm-4 col-xs-12 "> 
-                            <div class="menu-info"> 
-                                <img src="img/menu/1/1.jpg" class="img-responsive" alt=""> <a href="./menu_all.html"> <div class="menu4-overlay"> 
-                                        <img src="images/family2.webp" width="476.66" height="325px"> 
-                                    </div> </a> 
-                            </div>                             
-                        </div>
-                        <div class="menu-item4 col-sm-4 col-xs-12 "> 
-                            <div class="menu-info"> 
-                                <img src="img/menu/1/1.jpg" class="img-responsive" alt=""> <a href="./menu_all.html"> <div class="menu4-overlay"> 
-                                        <img src="images/salad1.jpg" width="476.66" height="325px"> 
-                                    </div> </a> 
-                            </div>                             
-                        </div>                         
-                        <div class="menu-item4 col-sm-4 col-xs-12 "> 
-                            <div class="menu-info">
-    <a href="#">
-        <img src="11x17 Menu Tower of Pizza 4-4-25_Page_1.png" class="img-responsive" alt="Full Menu">
-        <div class="menu4-overlay">
-            <h3>VIEW FULL MENU</h3>
-            <p>Page 1</p>
-        </div>
-    </a>
-    <img src="11x17 Menu Tower of Pizza 4-4-25_Page_1.png" width="476.66" height="325px">
-</div> 
-                                    </div> </a> 
-                            </div>                             
-                        </div>
-                        <div class="menu-item4 col-sm-4 col-xs-12 "> 
-                            <div class="menu-info">
-    <a href="#">
-        <img src="11x17 Menu Tower of Pizza 4-4-25_Page_2.png" class="img-responsive" alt="Full Menu">
-        <div class="menu4-overlay">
-            <h3>VIEW FULL MENU</h3>
-            <p>Page 2</p>
-        </div>
-    </a>
-    <img src="11x17 Menu Tower of Pizza 4-4-25_Page_2.png" width="476.66" height="325px">
-</ 
-                                    </div> </a> 
-                            </div>                             
-                        </div>
-                        <div class="menu-item4 col-sm-4 col-xs-12 "> 
-                            <div class="menu-info"> <a href="./menu_all.html"> <div class="menu4-overlay"> 
-                                        <h3>VIEW FULL MENU</h3>
-                                        <p>Chicken Specialties</p>
-                                    </div> </a> 
-                            </div>                             
-                        </div>                         
                     </div>
                 </section>
                 <!-- subscribe -->                 
                 <!-- Footer-->                 
-                <section class="footer" style="background-color: #222; color: #fff; padding: 60px 0 30px; position: relative;"> 
+                <section class="footer" id="contact" style="background-color: #222; color: #fff; padding: 60px 0 30px; position: relative;">
                     <div class="container"> 
                         <div class="row"> 
                             <div class="col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.1s"> 
                                 <h1 style="font-size: 28px; color: #f9c56a; margin-bottom: 25px; font-weight: 700;">Our Story</h1> 
                                 <div style="width: 50px; height: 3px; background-color: #f9c56a; margin-bottom: 20px;"></div>
                                 <p style="font-size: 16px; line-height: 1.8; color: #ddd;">It all started in 1976 when George the owner of Tower of Pizza came to America from a small town set in the mountains of Greece. He brought with him authentic recipes and a passion for quality food that has made us a Key Largo favorite for over 45 years.</p> 
-                                <a href="./about.html" class="btn" style="background-color: #f9c56a; color: #333; padding: 8px 20px; border-radius: 30px; margin-top: 15px; display: inline-block; font-weight: 600; transition: all 0.3s ease;">Read Our Story</a> 
+                                <a href="#about" class="btn" style="background-color: #f9c56a; color: #333; padding: 8px 20px; border-radius: 30px; margin-top: 15px; display: inline-block; font-weight: 600; transition: all 0.3s ease;">Read Our Story</a>
                             </div>                             
                             <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.2s"> 
                                 <h1 style="font-size: 28px; color: #f9c56a; margin-bottom: 25px; font-weight: 700;">Customer Love</h1> 
@@ -650,6 +444,7 @@
             });
           });
         </script>
+<script src="https://www.fbgcdn.com/embedder/js/ewm2.js" defer async ></script>
 
     <!-- PWA Install Button -->
     <div id="installPrompt" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #d4af37; color: white; padding: 15px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3); z-index: 1000; font-family: Arial, sans-serif;">
