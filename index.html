@@ -190,8 +190,8 @@
                         </div>                         
                         <div id="navbar" class="navbar-collapse collapse"> 
                             <ul class="nav navbar-nav navbar-right"> 
-                                <li><a href="./index.html">Home</a></li>                                 
-                                <li><a href="#" data-toggle="modal" data-target="#menuModal">Menu</a></li>                                 
+                                <li class="active"><a href="#home">Home</a></li>
+                                <li><a href="#menu">Menu</a></li>
                                 <li><a href="#contact">Contact</a></li>
                                 <li><a href="#about">About Us</a></li>
                                 <li><a href="#" class="btn btn-default btn-order-online" data-glf-cuid="e78d337c-5fc0-474c-99a6-5342c238847f" data-glf-ruid="46ab1cef-bc81-4621-9228-92d3cdc513ea">See MENU &amp; Order</a></li>
@@ -202,7 +202,7 @@
                 </nav>
                 
                 <!-- Home page-->                 
-                <section class="home" style="background-image: url('images/Main.jpeg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; height: 100vh; display: flex; align-items: center; justify-content: center;"> 
+                <section class="home scroll-section" id="home" style="background-image: url('images/Main.jpeg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; height: 100vh; display: flex; align-items: center; justify-content: center;">
                     <div class="tittle-block text-center"> 
                         <div class="logo wow fadeInDown" data-wow-delay="0.3s"> 
                             <a href="./index.html"> 
@@ -224,7 +224,7 @@
                     </div>                     
                 </section>                 
                 <!-- About page-->                 
-                <section class="about" id="about" style="padding: 80px 0; background-color: #fff;"> 
+                <section class="about scroll-section" id="about" style="padding: 80px 0; background-color: #fff;">
                     <div class="container"> 
                         <div class="row"> 
                             <div class="col-md-12"> 
@@ -286,7 +286,7 @@
                     </div>                     
                 </section>                 
                 <!-- menu-->                 
-                <section class="menu space60" style="position: relative; padding: 80px 0; overflow: hidden;"> 
+                <section class="menu scroll-section space60" id="menu" style="position: relative; padding: 80px 0; overflow: hidden;">
                     <div class="menu-bg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('images/frontmenu.webp') center center no-repeat; background-size: cover; filter: brightness(0.3); z-index: -1;"></div>
                     <div class="container"> 
                         <div class="row"> 
@@ -301,46 +301,125 @@
                                 <div class="col-md-12"> 
                                     <div class="menu-tags" style="margin-bottom: 40px; background-color: rgba(0,0,0,0.5); padding: 15px; border-radius: 50px; display: inline-block; box-shadow: 0 5px 15px rgba(0,0,0,0.2);"> 
                                         <span data-filter="*" class="tagsort-active" style="color: #333; font-size: 18px; padding: 12px 25px; border-radius: 30px; background-color: #f9c56a; font-weight: 600; margin: 0 8px; cursor: pointer; transition: all 0.3s ease; display: inline-block;">All</span> 
-                                        <span data-filter=".starter" style="color: #ffffff; font-size: 18px; padding: 12px 25px; border-radius: 30px; margin: 0 8px; cursor: pointer; transition: all 0.3s ease; display: inline-block; font-weight: 500;">Starters</span> 
-                                        <span data-filter=".pizza" style="color: #ffffff; font-size: 18px; padding: 12px 25px; border-radius: 30px; margin: 0 8px; cursor: pointer; transition: all 0.3s ease; display: inline-block; font-weight: 500;">Pizza</span>
-                                        <span data-filter=".dinner" style="color: #ffffff; font-size: 18px; padding: 12px 25px; border-radius: 30px; margin: 0 8px; cursor: pointer; transition: all 0.3s ease; display: inline-block; font-weight: 500;">Dinner</span> 
+                                        <span data-filter=".pizzas" style="color: #ffffff; font-size: 18px; padding: 12px 25px; border-radius: 30px; margin: 0 8px; cursor: pointer; transition: all 0.3s ease; display: inline-block; font-weight: 500;">Pizzas</span>
+                                        <span data-filter=".appetizers" style="color: #ffffff; font-size: 18px; padding: 12px 25px; border-radius: 30px; margin: 0 8px; cursor: pointer; transition: all 0.3s ease; display: inline-block; font-weight: 500;">Appetizers & Salads</span>
+                                        <span data-filter=".sandwiches" style="color: #ffffff; font-size: 18px; padding: 12px 25px; border-radius: 30px; margin: 0 8px; cursor: pointer; transition: all 0.3s ease; display: inline-block; font-weight: 500;">Sandwiches</span>
+                                        <span data-filter=".dinners" style="color: #ffffff; font-size: 18px; padding: 12px 25px; border-radius: 30px; margin: 0 8px; cursor: pointer; transition: all 0.3s ease; display: inline-block; font-weight: 500;">Dinners</span>
                                         <span data-filter=".desserts" style="color: #ffffff; font-size: 18px; padding: 12px 25px; border-radius: 30px; margin: 0 8px; cursor: pointer; transition: all 0.3s ease; display: inline-block; font-weight: 500;">Desserts</span> 
+                                        <span data-filter=".beverages" style="color: #ffffff; font-size: 18px; padding: 12px 25px; border-radius: 30px; margin: 0 8px; cursor: pointer; transition: all 0.3s ease; display: inline-block; font-weight: 500;">Beverages</span>
                                     </div>                                     
                                 </div>                                 
                             </div>
-                            <div class="row"> 
-                                <div class="col-md-12"> 
-                                    <div class="menu-btn"> <a class="btn btn-default btn-lg" href="#" role="button" data-toggle="modal" data-target="#menuModal">Explore our menu</a>
-                                    </div>                                     
-                                </div>                                 
+                            <div class="row menu-items">
+                                <!-- PIZZAS -->
+                                <div class="col-sm-6 menu-item pizzas"><h4>10" Gluten-Free Pizza</h4><p>13.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>Mozzarella Cheese & Tomato Sauce</h4><p>13.00 / 15.00 / 17.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>Seafood Pizza</h4><p>28.00 / 31.00 / 34.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>Greek Pizza</h4><p>21.00 / 23.00 / 25.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>BBQ Pizza</h4><p>21.00 / 23.00 / 25.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>Meat Lovers Pizza</h4><p>21.00 / 23.00 / 25.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>Buffalo Pizza</h4><p>21.00 / 23.00 / 25.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>Deluxe Pizza</h4><p>21.00 / 23.00 / 25.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>Hawaiian Pizza</h4><p>18.00 / 20.00 / 23.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>Alfredo Pizza</h4><p>16.00 / 18.00 / 21.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>White Pizza</h4><p>17.00 / 19.00 / 21.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>Vegetarian Pizza</h4><p>16.00 / 18.00 / 21.00</p></div>
+                                <div class="col-sm-6 menu-item pizzas"><h4>Tropical Pizza</h4><p>19.00 / 21.00 / 23.00</p></div>
+
+                                <!-- APPETIZERS & SALADS -->
+                                <div class="col-sm-6 menu-item appetizers"><h4>Mussels or Baby Clams</h4><p>15.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Shrimp Cocktail (6)</h4><p>11.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Garlic Rolls</h4><p>5.00 with Cheese 6.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Garlic Bread</h4><p>5.00 with Cheese 6.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Baked Mozzarella Sticks (7)</h4><p>9.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>GF Boneless Chicken Wings (10 or 20)</h4><p>11.00 / 21.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Felt's Cheese and Olive Oil and Oregano</h4><p>7.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Stuffed Grape Leaves (7)</h4><p>7.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Greek Trio</h4><p>8.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Side of Meat Balls or Sausage (2)</h4><p>5.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Minestrone</h4><p>6.50</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Pasta & Bean</h4><p>6.50</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Lentil</h4><p>6.50</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Antipasto for One</h4><p>11.00 / For Two 14.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Greek Salad for One</h4><p>11.00 / For Two 14.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Tuna Salad Platter</h4><p>11.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Chef's Salad</h4><p>15.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>Caesar Salad</h4><p>9.00</p></div>
+                                <div class="col-sm-6 menu-item appetizers"><h4>House Salad</h4><p>Small 6.00 / Large 11.00</p></div>
+
+                                <!-- SANDWICHES -->
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Stromboli</h4><p>11.50</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Calzone</h4><p>10.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Seafood Calzone</h4><p>14.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Steak, Cheese & Onion</h4><p>13.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Chicken Philly with Mushrooms, Onions & Cheese</h4><p>11.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Chicken Parmesan</h4><p>11.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Eggplant Parmesan</h4><p>11.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Meatball Parmesan</h4><p>11.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Sausage & Green Peppers Parmesan</h4><p>11.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Cheeseburger</h4><p>11.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Grilled Onions, Lettuce, Tomato & Pickle</h4><p>9.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Tower Special: Ham, Genoa Salami and Provolone</h4><p>11.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Meat Lovers: Ham, Roast Beef, Salami, Turkey & Provolone</h4><p>12.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Tuna with Lettuce, Tomato and Onion</h4><p>10.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Ham and Provolone</h4><p>10.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Salami and Provolone</h4><p>9.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Roast Beef and Provolone</h4><p>12.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>Turkey Club Sandwich with Lettuce, Bacon & Mayo</h4><p>12.00</p></div>
+                                <div class="col-sm-6 menu-item sandwiches"><h4>The Club with Mayo</h4><p>9.00</p></div>
+
+                                <!-- DINNERS -->
+                                <div class="col-sm-6 menu-item dinners"><h4>Linguine with Butter & Garlic</h4><p>12.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Spaghetti with Tomato Sauce</h4><p>12.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Spaghetti with Marinara, Meat Sauce, Sausage or Meatballs</h4><p>15.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Baked Ziti with Meat Sauce & Cheese</h4><p>15.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Tower Casserole over Spaghetti</h4><p>17.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Chicken Parmesan over Spaghetti</h4><p>18.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Chicken Breast with Artichokes & Spinach over Spaghetti</h4><p>19.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Lasagna</h4><p>15.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Manicotti</h4><p>14.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Stuffed Shells</h4><p>14.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Ravioli with Meat or Cheese</h4><p>14.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Eggplant Parmesan over Spaghetti</h4><p>16.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Fettuccini Alfredo</h4><p>15.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Linguine White Clam Sauce</h4><p>19.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Shrimp Marinara over Linguine</h4><p>21.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Shrimp Scampi over Linguine</h4><p>21.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Lobster Ravioli</h4><p>18.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Baby Clams over Linguine with Scampi or Marinara Sauce</h4><p>22.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Mussels over Linguine with Scampi or Marinara Sauce</h4><p>22.00</p></div>
+                                <div class="col-sm-6 menu-item dinners"><h4>Seafood Platter</h4><p>37.00</p></div>
+
+                                <!-- DESSERTS -->
+                                <div class="col-sm-6 menu-item desserts"><h4>Homemade Key Lime Pie</h4><p>6.00</p></div>
+                                <div class="col-sm-6 menu-item desserts"><h4>Baklava</h4><p>3.00</p></div>
+                                <div class="col-sm-6 menu-item desserts"><h4>Chocolate Midnight Cake</h4><p>7.50</p></div>
+                                <div class="col-sm-6 menu-item desserts"><h4>N.Y. Cheesecake</h4><p>6.50</p></div>
+                                <div class="col-sm-6 menu-item desserts"><h4>Chocolate Cannoli</h4><p>6.50</p></div>
+                                <div class="col-sm-6 menu-item desserts"><h4>Tiramisu</h4><p>6.50</p></div>
+                                <div class="col-sm-6 menu-item desserts"><h4>Reeses Pie</h4><p>6.50</p></div>
+
+                                <!-- BEVERAGES -->
+                                <div class="col-sm-6 menu-item beverages"><h4>Fountain Drink (FREE REFILLS)</h4><p>3.50</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Pitcher of Soda (NO REFILLS)</h4><p>7.00</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Canned Soda (Assorted Variety)</h4><p>2.00</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Iced Tea (FREE REFILLS)</h4><p>3.50</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Coffee or Hot Tea</h4><p>3.00</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Perrier or San Pelligrino Water</h4><p>3.50</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Evian or Fiji Water</h4><p>3.00</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Bottled Water</h4><p>Sm. 3.00 Lg. 5.00</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Apple Juice</h4><p>Sm. 1.50 Lg. 1.50</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Milk or Chocolate Milk</h4><p>Sm. 3.00 Lg. 5.00</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Gatorade/Arizona Iced Tea</h4><p>3.00</p></div>
+                                <div class="col-sm-6 menu-item beverages"><h4>Energy Drink</h4><p>5.00</p></div>
                             </div>
                         </div>
                     </div>                     
                 </section>
-                <section class="about" id="about">
-                    <!-- Menu items wrapped in Bootstrap modal -->
-                    <div id="menuModal" class="modal fade" tabindex="-1" role="dialog">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title">Our Menu</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="11x17 Menu Tower of Pizza 4-4-25_Page_1.png" class="img-responsive" alt="Menu Page 1">
-                                    <hr>
-                                    <img src="11x17 Menu Tower of Pizza 4-4-25_Page_2.png" class="img-responsive" alt="Menu Page 2">
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="#" class="btn btn-default btn-order-online" data-glf-cuid="e78d337c-5fc0-474c-99a6-5342c238847f" data-glf-ruid="46ab1cef-bc81-4621-9228-92d3cdc513ea">See MENU &amp; Order</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
                 <!-- subscribe -->                 
                 <!-- Footer-->                 
-                <section class="footer" id="contact" style="background-color: #222; color: #fff; padding: 60px 0 30px; position: relative;">
+                <section class="footer scroll-section" id="contact" style="background-color: #222; color: #fff; padding: 60px 0 30px; position: relative;">
                     <div class="container"> 
                         <div class="row"> 
                             <div class="col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.1s"> 
@@ -429,13 +508,24 @@
             
             // Add active class to menu items on scroll
             $(window).scroll(function() {
-              var scrollDistance = $(window).scrollTop();
-              $('.section').each(function(i) {
-                if ($(this).position().top <= scrollDistance + 100) {
-                  $('.navbar-nav li.active').removeClass('active');
-                  $('.navbar-nav li').eq(i).addClass('active');
+                var scrollDistance = $(window).scrollTop();
+                var activeSection = null;
+
+                $('.scroll-section').each(function() {
+                    // Check if section is in view, with an offset for better user experience
+                    if ($(this).position().top <= scrollDistance + 150) {
+                        activeSection = $(this);
+                    }
+                });
+
+                if (activeSection) {
+                    var sectionId = activeSection.attr('id');
+                    $('.navbar-nav li.active').removeClass('active');
+                    $('.navbar-nav a[href="#' + sectionId + '"]').parent().addClass('active');
+                } else {
+                    $('.navbar-nav li.active').removeClass('active');
+                    $('.navbar-nav a[href="#home"]').parent().addClass('active');
                 }
-              });
             }).scroll();
             
             // Mobile menu toggle
