@@ -67,8 +67,6 @@ TABLE OF CONTENTS
    Global Styles
    ================================================ */
 @import 'settings-panel.css';
-@import url(https://fonts.googleapis.com/css?family=Raleway:900,800,700,600,400,300,200,100);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:700,600,400);
 
 h1,
 h2,
@@ -82,7 +80,6 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     color: #4b4741;
     text-align: center;
@@ -92,7 +89,6 @@ h6,
 
 .small,
 small {
-    font-family: "Josefin Sans", sans-serif;
     font-weight: 700;
     display: block !important;
     text-transform: none;
@@ -130,7 +126,6 @@ small {
 }
 
 p {
-    font-family: "Josefin Sans", sans-serif;
     color: #828281;
     font-size: 22px;
 }
@@ -285,7 +280,6 @@ html {
    Forms & Buttons
    ================================================ */
 .form-group {
-    font-family: "Josefin Sans", sans-serif;
 }
 
 .form-group label {
@@ -307,7 +301,6 @@ html {
 .btn {
     border-radius: 0px;
     border: none;
-    font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
@@ -393,7 +386,6 @@ fieldset[disabled] .btn-default.active {
     padding: 25px 15px;
     font-weight: 700;
     font-size: 25px;
-    font-family: "Raleway", sans-serif;
     transition: all 0.5s ease;
 }
 
@@ -474,7 +466,6 @@ fieldset[disabled] .btn-default.active {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 12px;
-    font-family: "Raleway", sans-serif;
     padding: 7px 30px;
 }
 
@@ -1074,7 +1065,6 @@ fieldset[disabled] .btn-default.active {
 }
 
 .datepicker {
-    font-family: "Josefin Sans", sans-serif;
 }
 
 .datepicker.dropdown-menu {
@@ -1215,7 +1205,6 @@ fieldset[disabled] .btn-default.active {
 .menu-tags2 span,
 .menu-tags3 span,
 .menu-tags4 span {
-    font-family: "Raleway", sans-serif;
     font-size: 29px;
     color: #828281;
     font-weight: 700;
@@ -1285,7 +1274,6 @@ fieldset[disabled] .btn-default.active {
     padding-left: 10px;
     line-height: 18.8px;
     margin: 5px 0px;
-    font-family: Josefin Sans;
     font-size: 25px;
     font-weight: 700;
     color: #ffffff;
@@ -1485,7 +1473,6 @@ fieldset[disabled] .btn-default.active {
 .page_header p {
     margin: 15px 0;
     font-size: 24px;
-    font-family: Raleway;
     color: #fff;
     opacity: 0.7;
 }
@@ -1677,7 +1664,6 @@ fieldset[disabled] .btn-default.active {
     z-index: 48;
     bottom: -27.5px;
     right: 45px;
-    font-family: Raleway;
     padding-top: 27px;
     text-decoration: none;
 }
@@ -1717,7 +1703,6 @@ fieldset[disabled] .btn-default.active {
 }
 
 .menu2-overlay .price {
-    font-family: Josefin Sans;
     font-size: 36px;
     font-weight: bold;
     text-transform: uppercase;
@@ -1778,7 +1763,6 @@ fieldset[disabled] .btn-default.active {
 }
 
 .menu4-overlay .price {
-    font-family: Josefin Sans;
     font-size: 36px;
     font-weight: 700;
     text-transform: uppercase;
@@ -2182,7 +2166,6 @@ fieldset[disabled] .btn-default.active {
     position: relative;
     margin-bottom: 28px;
     padding-left: 70px;
-    font-family: josefin Sans;
     font-size: 16px;
 }
 
@@ -2226,7 +2209,6 @@ fieldset[disabled] .btn-default.active {
 
 .ingredients li {
     margin-bottom: 17px;
-    font-family: josefin Sans;
     font-size: 17px;
 }
 
@@ -2238,7 +2220,6 @@ fieldset[disabled] .btn-default.active {
 
 .nutrition-table {
     margin-bottom: 40px;
-    font-family: josefin Sans;
 }
 
 .nutrition-table table,
@@ -2390,7 +2371,6 @@ article h4 a:hover {
 
 .post-date {
     float: right;
-    font-family: Josefin Sans;
     color: #8E8E8E;
     font-size: 16px;
     margin: 34px 0;
@@ -2421,7 +2401,6 @@ article p {
     float: left;
     margin-right: 9px;
     cursor: pointer;
-    font-family: Josefin Sans;
     list-style: none;
 }
 
@@ -2462,7 +2441,6 @@ article p {
     border: solid 1px #e7e7e7;
     font-size: 18px;
     color: #0a0a0a;
-    font-family: Josefin Sans;
 }
 
 .search button {
@@ -2497,7 +2475,6 @@ article p {
     padding-left: 35px;
     font-size: 17px;
     color: #0a0a0a;
-    font-family: Josefin Sans;
     margin-bottom: 20px;
     position: relative;
 }
@@ -2524,7 +2501,6 @@ article p {
 
 .recent-post {
     padding: 0;
-    font-family: Josefin Sans;
 }
 
 .recent-post li {
@@ -2574,7 +2550,6 @@ article p {
     border: solid 1px #e7e7e7;
     font-size: 18px;
     color: #0a0a0a;
-    font-family: Josefin Sans;
     margin-bottom: 10px;
 }
 
@@ -2586,7 +2561,6 @@ article p {
     border: solid 1px #e7e7e7;
     font-size: 18px;
     color: #0a0a0a;
-    font-family: Josefin Sans;
     margin-bottom: 10px;
 }
 
@@ -2595,7 +2569,6 @@ article p {
 .comments-area .comment {
     padding-left: 100px;
     padding-bottom: 20px;
-    font-family: Josefin Sans;
 }
 
 .comments-area .comment .comment-image {
@@ -2693,7 +2666,6 @@ article p {
    ================================================ */
 .shop-content {
     padding: 60px 0;
-    font-family: Josefin Sans;
 }
 
 .shop-content aside h5 {
@@ -2708,7 +2680,6 @@ article p {
     list-style: none;
     font-size: 13px;
     color: #0a0a0a;
-    font-family: Josefin Sans;
     margin-bottom: 20px;
     position: relative;
     text-transform: uppercase;
@@ -2847,7 +2818,6 @@ article p {
 
 .recent-products {
     padding: 0;
-    font-family: Josefin Sans;
 }
 
 .recent-products li {
@@ -3541,7 +3511,6 @@ article p {
     .element-tab .nav-tabs > li > a {
         color: #4B4741;
         font-size: 12px;
-        font-family: Raleway;
         padding: 19px 14px;
     }
 
@@ -3600,7 +3569,6 @@ article p {
 }
 
 .footer {
-    font-family: Josefin Sans;
 }
 
 .footer .footer-blog .footer-blog-text {
@@ -3786,7 +3754,6 @@ textarea {
     color: #000 !important;
     max-width: 100%;
     padding: 0px 12px;
-    font-family: Josefin Sans;
 }
 
 #result a {
@@ -3963,7 +3930,6 @@ article.blog-mason-item p {
 /* Alert
       ----- */
 .alert {
-    font-family: Josefin Sans;
     font-size: 18px;
     color: #0a0a0a;
     border: none;
@@ -4013,7 +3979,6 @@ article.blog-mason-item p {
 .element-tab .nav-tabs > li > a {
     color: #4B4741;
     font-size: 14px;
-    font-family: Raleway;
     padding: 25px;
 }
 
@@ -4050,7 +4015,6 @@ article.blog-mason-item p {
 .pricing {
     border: 1px solid #e6e6e6;
     padding: 42px 32px;
-    font-family: Josefin Sans;
     position: relative;
     margin-top: 50px;
 }
